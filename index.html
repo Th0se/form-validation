@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <form id="formulir" action="">
+        <fieldset>
+            <label for="emailAddress">Enter your email address:</label>
+            <input type="email" id="emailAddress" name="email-address" placeholder="Enter your email address" required>
+            <span class="error" aria-live="polite"></span>
+        </fieldset>
+        <fieldset>
+            <label for="country">Enter your country:</label>
+            <select id="country" name="country" required>
+                <option value="France">France</option>
+                <option value="Germany">Germany</option>
+                <option value="United Kingdom">United Kingdom</option>
+                <option value="India">India</option>
+                <option value="Indonesia">Indonesia</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <label for="postcode">Enter your postcode:</label>
+            <input id="postcode" name="postcode" required>
+        </fieldset>
+        <fieldset>
+            <label for="password">Enter your password (Password must be at 16 to 72 characters long,
+                                    contains both upper and lower case letters,
+                                    contains at least 2 numbers,
+                                    and contains special characters):
+            </label>
+            <input id="password" name="password" type="password" required>
+        </fieldset>
+        <fieldset>
+            <label for="passwordConfirm">Confirm your password:</label>
+            <input id="passwordConfirm" name="passwordConfirm" type="password" required>
+            <span class="error" aria-live="polite"></span>
+        </fieldset>
+        <button type="submit">Request</button>
+    </form>
+    <script src="index.js"></script>
+</body>
+</html>
