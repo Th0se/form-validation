@@ -53,16 +53,16 @@ password.addEventListener(`input`, () => {
 });
 
 const passwordCheck = () => {
-    const constraint = new RegExp(`/^(?=.*[A-Z].*[A-Z])(?=.*[!@#$&*])(?=.*[0-9].*[0-9])(?=.*[a-z].*[a-z].*).{16,72}$/`, ``);
+    const constraint = new RegExp(`^(?=.*[A-Z])(?=.*[a-z])(?=.*\\d)(?=.*[!@#$%^&*])[A-Za-z\\d!@#$%^&*]{16,72}$`, ``);
 
     if (!constraint.test(password.value)) {
-        password.setCustomValidity(`Password must be at 16 to 72 characters long,
-                                        contains both upper and lower case letters,
-                                        contains at least 2 numbers,
-                                        and contains special characters`);
+        password.setCustomValidity(`Password must be between 16 to 72 characters long,
+                                        contain both upper and lower case letters,
+                                        contain at least 1 number,
+                                        and may contain special characters.`);
     } else {
         password.setCustomValidity(``);
-    }
+    };
 };
 
 const passwordConfirm = document.querySelector(`#passwordConfirm`);
